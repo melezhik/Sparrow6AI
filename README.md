@@ -47,6 +47,9 @@ matching Regular expressions. In this example we use so called regular expressio
 (:i) to enable case insensitive matching. Raku regular expression should be placed
 after reserved `regxp: ` prefix.
 
+Checks that use Raku regular expressions
+are called regular expressions checks or simply regular expressions
+
 # Q3 Sequential checks 
 
 Question:
