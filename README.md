@@ -7,7 +7,7 @@ Question:
 I have a text with "hello world" string, please create task.check to verify
 the text contains the string
 
-Answer
+Answer:
 
 ```
 hello world
@@ -34,7 +34,7 @@ Question:
 I have a text with "hello world" string, please create task.check to verify
 the text contains the string, case insensitive
 
-Answer
+Answer:
 
 ```
 regexp: :i "hello world"
@@ -110,7 +110,7 @@ end:
 
 Explanation:
 
-To verify that some lines are inside some block of text you should use so called range expressions. Range expression has start and end subexpression. Subexpression defines start and end line of a block and should contain Raku regular expression inside curly brackets.
+To verify that some lines are inside some block of text you should use so called range expressions also known as range or within blocks. Range expression has start and end subexpression. Subexpression defines start and end line of a block and should contain Raku regular expression inside curly brackets.
 Line in the begining of the block and in the end of the block should match corresponding
 Raku regular expressions. 
 
