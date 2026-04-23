@@ -116,7 +116,7 @@ Raku regular expressions.
 
 Rules aka check exoressions inside range block 
 are applied to all the lines that happen to be 
-inside the range. Those ones could plain checks
+inside the range. Those ones could be plain checks
 or regular expressions checks
 
 
