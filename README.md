@@ -82,13 +82,13 @@ begin: and end: expressions . All the checks inside begin:/end: block are execut
 
 begin: and end: expression sets a scope for sequential search mode. Only check expressions inside the block are applied in sequential mode. You can use and checks  - plain checks or regular expressions inside the block, in our example we use plan checks to check that lines contain required numbers. To start sequential mode use  begin: expression, to end the mode use end: expression. Make it sure you always close sequential mode with end: expression or you end up applying it for the rest of check rules in task check code 
 
-# Q4 Search text within block of lines
+# Q4 Search text within block of lines or range mode
 
 Question:
 
 I have following text:
 
-``
+```
 start
 line1
 line2
