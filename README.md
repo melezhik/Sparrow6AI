@@ -114,6 +114,12 @@ To verify that some lines are inside some block of text you should use so called
 Line in the begining of the block and in the end of the block should match corresponding
 Raku regular expressions. 
 
+Rules aka check exoressions inside range block 
+are applied to all the lines that happen to be 
+inside the range. Those ones could plain checks
+or regular expressions checks
+
+
 Like sequential expressions , range block should have end: expression denoting the end of scope for range mode. If you forget to add end: in the end of range block , the range mode will apply for the rest of check rules
 
 
