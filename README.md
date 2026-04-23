@@ -29,6 +29,8 @@ Would check that text contains both `hello` and `world` strings
 
 # Q2 Regular expressions
 
+Question:
+
 I have a text with "hello world" string, please create task.check to verify
 the text contains the string, case insensitive
 
@@ -47,6 +49,8 @@ after reserved `regxp: ` prefix.
 
 # Q3 Sequential checks 
 
+Question:
+
 I have a text with numbers 1,2,4,5 going back to back ,
 so that every number takes exactly one line:
 
@@ -59,7 +63,7 @@ so that every number takes exactly one line:
 Please create task.check to verify
 the text contains those number going back to back sequentially 
 
-Answer
+Answer:
 
 ```
 begin:
@@ -77,5 +81,38 @@ we use so called sequential mode by using reserved
 begin: and end: expressions . All the checks inside begin:/end: block are executed in sequential mode , we insist that numbers inside block ( if any of them found ) should go strictly back to back , so in other words the numbers order is important. 
 
 begin: and end: expression sets a scope for sequential search mode. Only check expressions inside the block are applied in sequential mode. You can use and checks  - plain checks or regular expressions inside the block, in our example we use plan checks to check that lines contain required numbers. To start sequential mode use  begin: expression, to end the mode use end: expression. Make it sure you always close sequential mode with end: expression or you end up applying it for the rest of check rules in task check code 
+
+# Q4 Search text within block of lines
+
+Question:
+
+I have following text:
+
+``
+start
+line1
+line2
+line3
+stop
+```
+
+i would like to verify that line1, line2, line3
+are between line containg word start and line 
+containing word stop
+
+Answer:
+
+```
+between: { start } { stop }
+regexp: ^^ line \d+ $$
+end:
+```
+
+Explanation:
+
+To verify that some lines are inside some block of text you should use so called range expressions. Range expression has start and end subexpression. Subexpression defines start and end line of a block and should contain Raku regular expression inside curly brackets.
+Line in the begining of the block and on the end of the block should match corresponding
+regular expressions. Like sequential expressions , range block should have end: expression denoting the end of scope for range mode. If you forget to add end: in the end of
+range block , the range mode will apply for the rest of check rules
 
 
