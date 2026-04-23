@@ -111,8 +111,9 @@ end:
 Explanation:
 
 To verify that some lines are inside some block of text you should use so called range expressions. Range expression has start and end subexpression. Subexpression defines start and end line of a block and should contain Raku regular expression inside curly brackets.
-Line in the begining of the block and on the end of the block should match corresponding
-regular expressions. Like sequential expressions , range block should have end: expression denoting the end of scope for range mode. If you forget to add end: in the end of
-range block , the range mode will apply for the rest of check rules
+Line in the begining of the block and in the end of the block should match corresponding
+Raku regular expressions. 
+
+Like sequential expressions , range block should have end: expression denoting the end of scope for range mode. If you forget to add end: in the end of range block , the range mode will apply for the rest of check rules
 
 
